@@ -7,40 +7,50 @@
     <!--     <meta name="title" content="title"> -->
     <!--     <meta name="description" content="description"> -->
 
-    <title>Document</title>
-    <!--         <link rel="icon" href="assets/images/favicon.png" /> -->
+    <script src="https://kit.fontawesome.com/f2b4deb65b.js" crossorigin="anonymous"></script>
+
+    <title>Frontend Mentor | Ping coming soon page</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
     <link rel="stylesheet" href="assets/css/main.css"/>
-
-    <!--Remove later-->
-    <style>
-        @font-face {
-            font-family: 'VT323';
-            src: url('assets/fonts/DotGothic16-Regular.ttf');
-        }
-
-        * {
-            font-family: 'VT323', sans-serif;
-            font-size: 120px;
-        }
-    </style>
-    <!--Remove later-->
 </head>
 <body>
-    <div style="display: grid; height: 100vh;">
-        <div style="width: 100%; background-color:var(--clr-primary-color-star-dust); display: flex; align-items: center; justify-content: center;
-        flex-direction: column"><h1 style="color: var(--clr-primary-color-election-night)">新世紀エヴァンゲリオン</h1></div>
-        <div style="width: 100%; background-color:var(--clr-primary-color-crackled); display: flex; align-items: center; justify-content: center;
-        flex-direction: column"><h1 style="color: var(--clr-primary-color-fading-horizon)">Neon Genesis Evangelion</h1></div>
-        <div style="width: 100%; background-color:var(--clr-primary-color-neon-spring); display: flex; align-items: center; justify-content: center;
-        flex-direction: column"><h1 style="color: var(--clr-primary-color-iris-royale)">新世紀エヴァンゲリオン</h1></div>
-        <div style="width: 100%; background-color:var(--clr-primary-color-iris-royale); display: flex; align-items: center; justify-content: center;
-        flex-direction: column"><h1 style="color: var(--clr-primary-color-neon-spring)">Neon Genesis Evangelion</h1></div>
-        <div style="width: 100%; background-color:var(--clr-primary-color-fading-horizon); display: flex; align-items: center; justify-content: center;
-        flex-direction: column"><h1 style="color: var(--clr-primary-color-crackled)">新世紀エヴァンゲリオン</h1></div>
-        <div style="width: 100%; background-color:var(--clr-primary-color-election-night);display: flex; align-items: center; justify-content: center;
-        flex-direction: column"><h1 style="color: var(--clr-primary-color-star-dust)">Neon Genesis Evangelion</h1></div>
-    </div>
+    <header class="header">
+        <img class="header__logo" src="assets/images/logo.svg" alt="Ping Logo" aria-hidden="true">
+        <h1 class="sr-only">Ping</h1>
+    </header>
+
+    <main class="launch-page-layout">
+        <section class="launch-page-layout__content">
+            <div class="launch-page-layout__text-area">
+                <h2>We are launching <strong class="txt-dark-blue">soon!</strong></h2>
+                <p>Subscribe and get notified</p>
+            </div>
+
+            <form id="launch-page-form" class="launch-page-layout__form" novalidate>
+                <div class="text-input">
+                    <label for="email" class="sr-only">Your email address</label>
+                    <input class="text-input__field" id="email" type="email" autocomplete="email" spellcheck="false"
+                           placeholder="Your email address..." required>
+                    <p class="text-input__status-message" id="email-status">Please provide a valid email address</p>
+                </div>
+
+                <button class="button" type="submit">Notify Me</button>
+            </form>
+        </section>
+        <img src="assets/images/illustration-dashboard.png" alt="">
+    </main>
+
+    <footer class="footer">
+        <div class="footer__socials">
+            <a><i class="fa-fw fa-brands fa-facebook-f"></i></a>
+            <a><i class="fa-fw fa-brands fa-twitter"></i></a>
+            <a><i class="fa-fw fa-brands fa-instagram"></i></a>
+        </div>
+
+        <p class="copyright">&copy; Copyright Ping. All rights reserved.</p>
+    </footer>
+
 
     <script src="assets/scripts/index.js"></script>
 </body>

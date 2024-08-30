@@ -1,0 +1,21 @@
+.footer {
+  display: grid;
+  justify-items: center;
+  align-self: flex-end;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  color: var(--clr-neutral-color-gray);
+
+  &__socials {
+    display: flex;
+    gap: 1rem;
+
+    & > * {
+      color: var(--clr-primary-color-blue);
+      display: inline;
+      padding: 0.5rem;
+      border: 1px solid var(--clr-secondary-color-pale-blue);
+      border-radius: 50rem;
+    }
+  }
+}

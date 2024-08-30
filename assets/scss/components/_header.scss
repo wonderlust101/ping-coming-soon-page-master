@@ -1,0 +1,15 @@
+@use '../abstract' as a;
+
+.header{
+  display: grid;
+  justify-items: center;
+  margin-top: 4.5rem;
+
+  &__logo {
+    width: 4rem;
+
+    @include a.breakpoint(medium){
+      width: 5rem;
+    }
+  }
+}

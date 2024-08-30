@@ -1,6 +1,34 @@
 @use '../abstract' as a;
 
 h1, h2, h3, h4,
-h5, h6, p {
+h5, h6, p, input, button {
+  color: var(--clr-neutral-color-very-dark-blue);
+  font-family: 'Libre Franklin', sans-serif;
+}
 
+h2 {
+  font-weight: 400;
+  color: var(--clr-neutral-color-gray);
+
+  @include a.breakpoint(medium){
+    font-size: 2.75rem;
+  }
+}
+
+p {
+  font-size: 0.9rem;
+
+  @include a.breakpoint(medium){
+    font-size: 1.1rem;
+  }
+}
+
+input[type=submit] {
+    font-weight: 500;
+}
+
+.txt {
+  &-dark-blue {
+    color: var(--clr-neutral-color-very-dark-blue);
+  }
 }

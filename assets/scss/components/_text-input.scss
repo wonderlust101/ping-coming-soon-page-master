@@ -1,0 +1,57 @@
+@use '../abstract' as a;
+
+.text-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  
+  &__field {
+    width: 100%;
+    padding: 1rem 2rem;
+    border-radius: 50rem;
+    border: 2px solid var(--clr-secondary-color-pale-blue);
+
+    &::placeholder {
+      color: var(--clr-neutral-color-gray);
+    }
+
+    &:focus {
+      outline: none !important;
+      border: 2px solid var(--clr-primary-color-blue);
+    }
+  }
+
+  &__error,
+  &__error:focus {
+    border: 2px solid var(--clr-secondary-color-light-red);
+  }
+
+  &__success,
+  &__success:focus {
+    border: 2px solid var(--clr-secondary-color-light-green);
+  }
+
+  &__status-message {
+    display: none;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--clr-secondary-color-light-red);
+
+    @include a.breakpoint(medium) {
+      position: absolute;
+      padding-left: 2rem;
+      left: 0;
+      bottom: -1.25rem;
+    }
+
+    &--error {
+      color: var(--clr-secondary-color-light-red);
+    }
+
+    &--success {
+      color: var(--clr-secondary-color-light-green);
+    }
+  }
+}
